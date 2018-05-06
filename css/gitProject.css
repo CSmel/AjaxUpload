@@ -1,0 +1,142 @@
+html, body {
+  height: 100%;
+  font-family: Roboto;
+  font-size: 1.2em
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+/*==========================
+grid system
+============================*/
+
+.nav {
+  display: grid;
+  grid-area: nav;
+}
+
+.section {
+  display: grid;
+  grid-area: section;
+  align-items: center;
+}
+
+.section-container {
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: dashed 1px black;
+  padding:20px;
+}
+
+.login {
+  display: grid;
+  grid-area: login;
+  align-content: center;
+}
+
+.comment {
+  display: grid;
+  grid-area: comment;
+  align-content: center;
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+}
+
+/*================================
+nested grid-login
+===============================*/
+
+.wrapper-nested {
+  display: grid;
+  min-height: 100%;
+  grid-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-areas: "name" "password" "buttons";
+}
+
+.input-name-nested {
+  display: grid;
+  grid-area: name;
+  grid-row-gap: 20px;
+  justify-content: center;
+}
+
+.input-password-nested {
+  display: grid;
+  grid-area: password;
+  grid-row-gap: 20px;
+  justify-content: center;
+}
+
+.buttons-nested {
+  display: flex;
+  grid-area: buttons;
+  justify-content: center;
+}
+/*================================
+nested grid comment uploadForm
+===============================*/
+
+.wrapper-nested-comment {
+  display: grid;
+  min-height: 100%;
+  grid-gap: 20px;
+  grid-template-areas: "head" "name" "password" "buttons";
+}
+.input-comment-head-nested {
+  display: grid;
+  grid-area: head;
+  justify-content: center;
+}
+.input-comment-name-nested {
+  display: grid;
+  grid-area: name;
+  justify-content: center;
+}
+
+.input-comment-review-nested {
+  display: grid;
+  grid-area: password;
+  justify-content: center;
+}
+
+.buttons-comment-nested {
+  display: grid;
+  grid-area: buttons;
+  justify-content: center;
+}
+
+
+/*=============================
+links
+==============================*/
+
+.nav-link {
+  color: #358aa4;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #000
+}
+
+/*=============================
+meida queries
+==============================*/
