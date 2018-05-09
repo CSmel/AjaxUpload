@@ -8,22 +8,22 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="css/gitProject.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="includes/jquery.js"></script>
       <style>
       .wrapper {
         display: grid;
-        grid-template-rows: .5fr.5fr .5fr .5fr;
+        grid-template-rows: repeat(4, .3fr);
         min-height: 100%;
         grid-gap: 10px;
-        grid-column-gap: 0;
+        grid-column-gap: 10px;
         grid-template-areas: "nav nav" "comment comment" "section section" "footer footer";
       }</style>
 </head>
 <body>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="includes/jquery.js"></script>
+
   <div class="wrapper">
 <?php include 'includes/nav.php' ?>
-
 <?php include 'includes/connection.php' ?>
 
         <?php

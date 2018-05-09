@@ -13,9 +13,27 @@ $(document).ready(function() {  // once the document is ready, then the function
       contentType: false, // options
       cache: false,
       processData: false,
-      success: function(data) { // this section is for testing purposes.
+      success: function(data) {
+         // this section is for testing purposes.
+         if(data == -1){
+          $('#error').text("Name or comment was empty.");
+         }
+else if(data == 0){
+  $('#error').text("File input was empty.");
+}
+else if(data == 1) {
+  $('#error').text("File size is too big.");
+}
+else if(data == 2) {
+  $('#error').text("File uploaded successfully.");
+    $('#load').load('includes/section.php');
+}
+else if(data == 3) {
+  $('#error').text("File upload failed, please try again.");
+}
+else{
   $('#load').load('includes/section.php');
-//$('nav').hide("slow");
+}
 }
   });
 });

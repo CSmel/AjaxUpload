@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   font-family: Roboto;
   font-size: 1.2em
@@ -24,31 +25,30 @@ grid system
 .section {
   display: grid;
   grid-area: section;
-  align-items: center;
+  justify-content: center;
 }
 
 .section-container {
   height: 300px;
-  display: flex;
-  align-items: flex-start;
   justify-content: center;
+  display: grid;
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
   border: dashed 1px black;
-  padding:20px;
+  padding: 20px;
 }
 
 .login {
   display: grid;
   grid-area: login;
-  align-content: center;
+  justify-content: center;
 }
 
 .comment {
   display: grid;
   grid-area: comment;
-  align-content: center;
+  justify-content: center;
 }
 
 .footer {
@@ -74,22 +74,25 @@ nested grid-login
 .input-name-nested {
   display: grid;
   grid-area: name;
-  grid-row-gap: 20px;
+  padding: 20px;
   justify-content: center;
 }
 
 .input-password-nested {
   display: grid;
   grid-area: password;
-  grid-row-gap: 20px;
+  padding: 20px;
   justify-content: center;
 }
 
 .buttons-nested {
   display: flex;
   grid-area: buttons;
+  padding: 20px;
+  flex-direction: row;
   justify-content: center;
 }
+
 /*================================
 nested grid comment uploadForm
 ===============================*/
@@ -100,29 +103,35 @@ nested grid comment uploadForm
   grid-gap: 20px;
   grid-template-areas: "head" "name" "password" "buttons";
 }
+
 .input-comment-head-nested {
   display: grid;
   grid-area: head;
   justify-content: center;
+  padding: 20px;
 }
+
 .input-comment-name-nested {
   display: grid;
   grid-area: name;
   justify-content: center;
+  padding: 20px;
 }
 
 .input-comment-review-nested {
   display: grid;
   grid-area: password;
   justify-content: center;
+  padding: 20px;
 }
 
 .buttons-comment-nested {
   display: grid;
+  position: relative;
   grid-area: buttons;
   justify-content: center;
+  padding: 20px;
 }
-
 
 /*=============================
 links
@@ -138,5 +147,23 @@ links
 }
 
 /*=============================
-meida queries
+general
 ==============================*/
+
+[type="submit"],
+[type="reset"] {
+  background-color: #358aa4;
+  border: 1px solid #000;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+#error {
+  transform: translate(50%, 0);
+  font-size: 11px;
+  position: absolute;
+}
+
+.error {
+  font-size: 11px;
+}

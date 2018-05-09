@@ -14,7 +14,9 @@
 			<div class="buttons-comment-nested">
 				<label for="upload">Select image to upload:</label>
 				<input type="file" id="image" name="image" value="UPLOAD" /><br>
-				<input type="submit" id="submit" value="Upload" name="submit"/></div>
+				<input type="submit" id="submit" value="Upload" name="submit"/>
+			</div>
+			<div id="error"></div>
 		</form>
 </div> <!-- close nested comment grid -->
 	</div><!-- close comment grid -->
