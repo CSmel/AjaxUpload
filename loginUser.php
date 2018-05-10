@@ -9,7 +9,9 @@
     <link href="css/gitProject.css" rel="stylesheet" type="text/css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="includes/jquery.js"></script>
+            <script src="includes/jquery.js"></script>
+      <script src="js/dragndrop.js"></script>
+
       <style>
       .wrapper {
         display: grid;
