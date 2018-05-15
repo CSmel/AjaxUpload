@@ -31,7 +31,8 @@ else{
 										echo "1";
                 } else {
                     // insert data into database(prepared and binded)
-                    $insert = $connection->prepare("INSERT INTO  commenter (name, comment, dateVal, timeVal, image) VALUES (?, ?, ?, ?, ?)");
+                    $insert = $connection->prepare(/** @lang text */
+                        'INSERT INTO  commenter (name, comment, dateVal, timeVal, image) VALUES (?, ?, ?, ?, ?)');
                     $insert->bindParam(5, $_FILES["image"]['tmp_name'], PDO::PARAM_LOB);
                     $insert->execute(array($name, $comment, $dateVal, $timeVal,  $imgContent ));
                     if ($insert) {

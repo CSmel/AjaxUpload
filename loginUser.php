@@ -7,10 +7,12 @@
     <meta content="Melanie Sakas" name="author">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="css/gitProject.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-            <script src="includes/jquery.js"></script>
-      <script src="js/dragndrop.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <link href="bower_components/jquery-ui/themes/flick/jquery-ui.css" rel="stylesheet">
+    <script src="includes/jquery.js"></script>
+    <script src="js/modal-dialog.js"></script>
 
       <style>
       .wrapper {
