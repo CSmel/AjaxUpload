@@ -8,7 +8,7 @@
                 <input id="name" type="text" name="name">
             </div>
             <div class="input-comment-review-nested">
-                <label for="Review">Review</label>
+                <label for="comment">Review</label>
                 <input id="comment" type="text" name="comment">
             </div>
             <div class="buttons-comment-nested">

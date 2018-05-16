@@ -21,28 +21,43 @@
                     duration: 1000
                 }
             });
+            $("#dialog-end").dialog({
+                autoOpen: false,
+                modal: true,
+                show: {
+                    effect: "drop",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 1000
+                }
+            });
         });
+
         $('#open-dialog').on("click", function () {
             $("#dialog").dialog("open");
-            $("#yay").on("click", function(){
+            $("#yay").on("click", function () {
                 $("#dialog").dialog("close");
                 $('#uploadForm').show('slow');
                 $('.section-container').hide('slow');
             });
-            $("#nay").on("click", function(){
+            $("#nay").on("click", function () {
                 $("#dialog").dialog("close");
-                alert('BYE!!!');
-                setTimeout("window.location = 'index.php';",
-                    10);
-
-                });
+                setTimeout("$('#dialog-end').dialog('open')", 1000);
+                setTimeout("window.location.href='index.php';", 4000);
             });
+
         });
+    });
 
 
 </script>
+<div id="dialog-end">
+    <h2>Well, see ya!</h2>
+</div>
 <div id="dialog" title="Upload again?">
-   <button id="yay">Yay</button>
+    <button id="yay">Yay</button>
     or
     <button id="nay">Nay</button>
 </div>

@@ -1,0 +1,23 @@
+{
+  "name": "AjaxUpload",
+  "homepage": "https://github.com/CSmel/AjaxUpload",
+  "authors": [
+    "csmel <melsakas@gmail.com>"
+  ],
+  "description": "Ajax Upload form with jQuery",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "^1.17.0",
+    "dropzone": "^5.1.1",
+    "coffeescript": "^2.3.0"
+  }
+}

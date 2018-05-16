@@ -1,0 +1,30 @@
+{
+  "name": "coffeescript",
+  "main": [
+    "lib/coffeescript/browser.js"
+  ],
+  "description": "Unfancy JavaScript",
+  "keywords": [
+    "javascript",
+    "language",
+    "coffeescript",
+    "compiler"
+  ],
+  "author": {
+    "name": "Jeremy Ashkenas"
+  },
+  "ignore": [
+    "test"
+  ],
+  "homepage": "https://github.com/jashkenas/coffeescript",
+  "version": "2.3.0",
+  "_release": "2.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.3.0",
+    "commit": "8061ecf0e2d4ec56660de73a9ed3b95c31f9561d"
+  },
+  "_source": "https://github.com/jashkenas/coffeescript.git",
+  "_target": "^2.3.0",
+  "_originalSource": "coffeescript"
+}
