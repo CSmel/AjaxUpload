@@ -1,10 +1,15 @@
 html,
 body {
-    height: 100%;
+    height: 96%;
     font-family: Roboto;
-    font-size: 1.2em
+    font-size: 1.2em;
+    background-color: #1d5987;
+    margin: 0;
+    padding: 1%
 }
-
+body > *{
+    background-color: #fff;
+}
 nav ul {
     margin: 0;
     padding: 0;
@@ -23,9 +28,11 @@ grid system
 }
 
 .section {
-    display: grid;
+    /*display: grid;*/
     grid-area: section;
     justify-content: center;
+    align-items: center;
+display: none;
 }
 
 .section-container {
@@ -35,20 +42,20 @@ grid system
     flex-direction: column;
     overflow: scroll;
     overflow-x: hidden;
-    border: dashed 1px black;
-    padding: 20px;
 }
 
 .login {
     display: grid;
     grid-area: login;
     justify-content: center;
+    align-content: center;
 }
 
 .comment {
     display: grid;
     grid-area: comment;
     justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -56,7 +63,6 @@ grid system
     grid-area: footer;
     align-items: flex-end;
     justify-content: center;
-    flex: 1;
 }
 
 /*================================
@@ -189,12 +195,12 @@ general
     display: grid;
     grid-area: file;
     opacity: 0;
-
     height: 100%;
-    padding:0;
+    padding: 0;
 }
 
-h6 {visibility: hidden;
+h6 {
+    visibility: hidden;
     display: grid;
     grid-area: h6;
     grid-column: 1 / 2;
@@ -208,10 +214,25 @@ h6 {visibility: hidden;
 #open-dialog {
     visibility: hidden;
 }
-
+#dialog-end{
+    display: none;
+}
 .ui-widget-overlay {
     opacity: .8 !important;
     background: #0a0a0a !important;
+}
+
+.ui-dialog-titlebar {
+    background: #fff !important;
+    border: none !important;
+}
+
+.ui-dialog-content {
+    text-align: center;
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
 }
 
 

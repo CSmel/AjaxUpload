@@ -14,51 +14,60 @@
     <script src="includes/jquery.js"></script>
     <script src="js/modal-dialog.js"></script>
 
-      <style>
-      .wrapper {
-        display: grid;
-        grid-template-rows: repeat(4, .3fr);
-        min-height: 100%;
-        grid-gap: 10px;
-        grid-column-gap: 10px;
-        grid-template-areas: "nav nav" "comment comment" "section section" "footer footer";
-      }</style>
+    <style>
+        .wrapperComment {
+            display: grid;
+            padding: 0;
+            min-height: 100%;
+            grid-gap: 0;
+            grid-row-gap: 10px;
+            grid-template-areas: "comment comment" "footer footer";
+        }
+
+        .wrapperSection {
+            display: grid;
+            padding: 0;
+            min-height: 100%;
+            grid-gap: 0;
+            grid-row-gap: 10px;
+            grid-template-areas: "section section" "footer footer";
+        }</style>
 </head>
 <body>
 
-  <div class="wrapper">
-<?php include 'includes/nav.php' ?>
-<?php include 'includes/connection.php' ?>
+<div id="wrapper" class="wrapperComment">
+    <?php include 'includes/connection.php' ?>
 
-        <?php
-$username = $_POST['loginName'];
-$password = $_POST['loginPW'];
+    <?php
+    $username = $_POST['loginName'];
+    $password = $_POST['loginPW'];
 
-//Create connection and select DB
-try {
-    $connection = new PDO('mysql:host=localhost;dbname=creativedb', $dbUsername, $dbPassword);
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Check connection
-    $verify = $connection->prepare("SELECT userAdmin From user WHERE userAdmin =?");
+    //Create connection and select DB
+    try {
+        $connection = new PDO('mysql:host=localhost;dbname=creativedb', $dbUsername, $dbPassword);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // Check connection
+        $verify = $connection->prepare("SELECT userAdmin From user WHERE userAdmin =?");
 
-    $verify->bindValue(':loginName', $username, PDO::PARAM_STR);
-    $verify->execute(array($_POST['loginName']));
+        $verify->bindValue(':loginName', $username, PDO::PARAM_STR);
+        $verify->execute(array($_POST['loginName']));
 
-    if ($verify->fetchColumn() == $_POST['loginName']) {
-include 'includes/uploadForm.php';
-    } else {
-        echo 'OOPS- Wrong username, try again.';
+        if ($verify->fetchColumn() == $_POST['loginName']) {
+            include 'includes/uploadForm.php';
+        } else {
+            echo 'OOPS- Wrong username, try again.';
+        }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
     }
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-$connection=null;
-?>
-<section class="section">
-<div id="load"></div></section>
-<footer class="footer">
-;-/
-</footer>
+    $connection = null;
+    ?>
+    <section class="section">
+        <div id="load"></div>
+    </section>
+    <footer class="footer">
+        ;-/
+    </footer>
 </div> <!-- close wrapper -->
 
 </body>

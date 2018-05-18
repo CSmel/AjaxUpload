@@ -44,6 +44,10 @@ $(document).ready(function () { // once the document is ready, then the function
                     $('#error').text("File uploaded successfully.");
                     $('#uploadForm').hide('slow');
                     $('#load').load('includes/section.php');
+                    $('.section').css("display", "grid");
+$('#wrapper').addClass('wrapperSection').removeClass('wrapperComment');
+$('.comment').css("display", "none");
+
                 } else if (data == 3) {
                     $('#error').text("File upload failed, please try again.");
                 } else {

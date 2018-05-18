@@ -10,6 +10,7 @@
         });
         $(function () {
             $("#dialog").dialog({
+                dialogClass: "no-close",
                 autoOpen: false,
                 modal: true,
                 show: {
@@ -22,6 +23,7 @@
                 }
             });
             $("#dialog-end").dialog({
+                dialogClass: "no-close",
                 autoOpen: false,
                 modal: true,
                 show: {
@@ -39,13 +41,20 @@
             $("#dialog").dialog("open");
             $("#yay").on("click", function () {
                 $("#dialog").dialog("close");
-                $('#uploadForm').show('slow');
-                $('.section-container').hide('slow');
+                $('#uploadForm').show();
+                $('.section').hide();
+                $('#open-dialog').css("visibility", "hidden");
+
+                $('.comment').css("display", "grid");
+                $('#wrapper').addClass('wrapperComment').removeClass('wrapperSection');
+
             });
             $("#nay").on("click", function () {
                 $("#dialog").dialog("close");
+                $("#dialog-end").css("visibility", "visible");
                 setTimeout("$('#dialog-end').dialog('open')", 1000);
                 setTimeout("window.location.href='index.php';", 4000);
+
             });
 
         });
